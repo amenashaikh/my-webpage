@@ -19,6 +19,9 @@
 
       // Hide the "No" image if it's showing
       document.getElementById("noImage").style.display = "none";
+
+      // Trigger flowing hearts animation
+      triggerHearts();
     }
 
     // Function to show the image when "No" is clicked without the zoom effect
@@ -26,6 +29,25 @@
       const noImage = document.getElementById("noImage");
       noImage.style.display = "block"; // Show the image
       document.getElementById("yesImage").style.display = "none"; // Hide the "Yes" image if it's showing
+    }
+
+    // Function to trigger the flowing hearts animation
+    function triggerHearts() {
+      const heartsContainer = document.createElement('div');
+      heartsContainer.classList.add('hearts-container');
+      document.body.appendChild(heartsContainer);
+
+      for (let i = 0; i < 10; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heartsContainer.appendChild(heart);
+        // Randomize the timing for each heart's movement
+        heart.style.animationDuration = `${Math.random() * 2 + 3}s`;
+        heart.style.animationDelay = `${Math.random() * 2}s`;
+      }
+
+      // Remove hearts after animation
+      setTimeout(() => heartsContainer.remove(), 5000);
     }
   </script>
 </head>
