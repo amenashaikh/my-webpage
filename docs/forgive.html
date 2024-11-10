@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Include Canvas Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
   <!-- JavaScript to Handle Button Clicks -->
   <script>
     // Function to show the image when "Yes" is clicked with a zoom-in effect
@@ -22,6 +25,13 @@
 
       // Trigger flowing hearts animation
       triggerHearts();
+
+      // Trigger confetti effect when the "YES" button is clicked
+      confetti({ 
+        particleCount: 100, 
+        spread: 70, 
+        origin: { y: 0.6 }
+      });
     }
 
     // Function to show the image when "No" is clicked without the zoom effect
@@ -42,12 +52,12 @@
         heart.classList.add('heart');
         heartsContainer.appendChild(heart);
         // Randomize the timing for each heart's movement
-        heart.style.animationDuration = `${Math.random() * 2 + 3}s`;
-        heart.style.animationDelay = `${Math.random() * 2}s`;
+        heart.style.animationDuration = `${Math.random() * 2 + 3}s`; // Random duration
+        heart.style.animationDelay = `${Math.random() * 2}s`; // Random delay
       }
 
-      // Remove hearts after animation
-      setTimeout(() => heartsContainer.remove(), 5000);
+      // Remove hearts after animation ends
+      setTimeout(() => heartsContainer.remove(), 5000); // Remove container after 5s
     }
   </script>
 </head>
