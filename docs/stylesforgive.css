@@ -1,0 +1,57 @@
+/* General body style */
+body {
+    background-color: #e0f7fa; /* Light blue background */
+    font-family: 'Dancing Script', cursive; /* Romantic font */
+    text-align: center; /* Center-aligns all text and inline elements */
+    margin-top: 50px;
+    position: relative; /* Make sure hearts can be positioned relative to body */
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Flowing Hearts Background Animation */
+@keyframes floatHearts {
+    0% {
+        opacity: 1;
+        transform: translateY(100vh) scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh) scale(1.5);
+    }
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px; /* Start position at the bottom */
+    width: 30px;
+    height: 30px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Heart_shape_icon_emoji.svg') no-repeat center center;
+    background-size: contain;
+    animation: floatHearts linear infinite;
+    animation-duration: 10s; /* Adjust to make hearts take longer to float */
+    animation-delay: calc(-5s + 10 * (random() * 0.5)); /* Random delay */
+}
+
+@keyframes randomFloat {
+    0% {
+        left: calc(100% * random()); /* Random horizontal start */
+        bottom: 0;
+    }
+    100% {
+        left: calc(100% * random()); /* Random horizontal end */
+        bottom: 100%;
+    }
+}
+
+/* Add multiple hearts by repeating the heart animation on the page */
+body::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/e/ec/Heart_shape_icon_emoji.svg");
+    animation: randomFloat 15s linear infinite;
+}
