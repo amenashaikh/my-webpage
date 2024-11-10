@@ -69,6 +69,11 @@ img {
 }
 
 /* Styling for the "Explore More" section links */
+.explore-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .explore-section a {
   display: inline-block;      /* Makes the link behave like a button */
   background-color: #007BFF;  /* Blue background */
