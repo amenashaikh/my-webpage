@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
   <!-- JavaScript to Handle Button Clicks -->
   <script>
     // Function to show the image when "Yes" is clicked with a zoom-in effect
@@ -19,6 +22,9 @@
 
       // Hide the "No" image if it's showing
       document.getElementById("noImage").style.display = "none";
+      
+      // Trigger Confetti effect
+      triggerConfetti();
     }
 
     // Function to show the image when "No" is clicked without the zoom effect
@@ -26,6 +32,15 @@
       const noImage = document.getElementById("noImage");
       noImage.style.display = "block"; // Show the image
       document.getElementById("yesImage").style.display = "none"; // Hide the "Yes" image if it's showing
+    }
+
+    // Confetti function to trigger the effect
+    function triggerConfetti() {
+      confetti({
+        particleCount: 200,      // Number of particles
+        spread: 70,              // Spread angle
+        origin: { x: 0.5, y: 0.5 } // Center of the screen
+      });
     }
   </script>
 </head>
