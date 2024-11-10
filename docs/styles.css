@@ -1,46 +1,64 @@
 /* General body style */
 body {
     background-color: #e0f7fa; /* Light blue background */
-    font-family: 'Great Vibes', cursive; /* Romantic font */
+    font-family: 'Dancing Script', cursive; /* Romantic font for welcome message and question */
     text-align: center; /* Center-aligns all text and inline elements */
     margin-top: 50px;
-  }
-  
-  /* Romantic Question Styling */
-  h1 {
+}
+
+/* Romantic Question Styling */
+h1 {
     color: #003366; /* Dark blue color for heading */
+    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
     font-size: 2em;
-  }
-  
-  /* Button Styling */
-  button {
+}
+
+/* Styling for the "Explore More" section links to look like buttons */
+.explore-section a {
+    display: inline-block;      /* Makes the link behave like a button */
+    background-color: #007BFF;  /* Blue background */
+    color: white;               /* White text */
+    padding: 10px 20px;         /* Padding for a button feel */
+    text-decoration: none;      /* Removes underline */
+    border-radius: 5px;         /* Rounded corners */
+    margin: 5px;                /* Space between buttons */
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font */
+    transition: background-color 0.3s; /* Smooth color change on hover */
+}
+
+.explore-section a:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* Button Styling */
+button {
     font-size: 1.2em;
     padding: 10px 20px;
     margin: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  /* Red "Yes" button */
-  button[onclick="showYesImage()"] {
+}
+
+/* Red "Yes" button */
+button[onclick="showYesImage()"] {
     background-color: red;
     color: white;
-  }
-  
-  /* Black "No" button */
-  button[onclick="showNoImage()"] {
+}
+
+/* Black "No" button */
+button[onclick="showNoImage()"] {
     background-color: black;
     color: white;
-  }
-  
-  /* Optional: Add a hover effect for buttons */
-  button:hover {
+}
+
+/* Optional: Add a hover effect for buttons */
+button:hover {
     opacity: 0.8;
-  }
-  
-  /* Center and style images */
-  img {
+}
+
+/* Center and style images */
+img {
     border-radius: 10px;
     margin-top: 20px;
     display: block;
@@ -48,21 +66,21 @@ body {
     margin-right: auto;
     width: 300px; /* Adjust the width as needed */
     transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  /* Zoom-in effect for "Yes" image */
-  .zoom-in {
+}
+
+/* Zoom-in effect for "Yes" image */
+.zoom-in {
     animation: zoomIn 0.5s ease-out;
-  }
-  
-  /* Define the zoom-in animation */
-  @keyframes zoomIn {
+}
+
+/* Define the zoom-in animation */
+@keyframes zoomIn {
     0% {
-      transform: scale(0.8); /* Start smaller */
-      opacity: 0; /* Start transparent */
+        transform: scale(0.8); /* Start smaller */
+        opacity: 0; /* Start transparent */
     }
     100% {
-      transform: scale(1); /* End at normal size */
-      opacity: 1; /* End fully visible */
+        transform: scale(1); /* End at normal size */
+        opacity: 1; /* End fully visible */
     }
-  }
+}
