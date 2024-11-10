@@ -9,6 +9,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+  <!-- JavaScript to Handle Button Clicks -->
+  <script>
+    // Function to show the image when "Yes" is clicked with a zoom-in effect
+    function showYesImage() {
+      const yesImage = document.getElementById("yesImage");
+      yesImage.style.display = "block"; // Show the image
+      yesImage.classList.add("zoom-in"); // Add the zoom-in effect class
+
+      // Hide the "No" image if it's showing
+      document.getElementById("noImage").style.display = "none";
+    }
+
+    // Function to show the image when "No" is clicked without the zoom effect
+    function showNoImage() {
+      const noImage = document.getElementById("noImage");
+      noImage.style.display = "block"; // Show the image
+      document.getElementById("yesImage").style.display = "none"; // Hide the "Yes" image if it's showing
+    }
+  </script>
 </head>
 <body>
 
