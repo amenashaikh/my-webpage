@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celebrating You, Ayman - Happy Men’s Day!</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #1c1f2e; /* Dark blue */
+      color: gold;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-top: 20px;
+    }
+
+    img {
+      border: 5px solid gold;
+      border-radius: 10px;
+      margin: 20px 0;
+      max-width: 300px;
+    }
+
+    .message {
+      background-color: #2c2f3e; /* Grey background for contrast */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .interactive-section {
+      margin-top: 30px;
+    }
+
+    .wheel-container, .trophy-container {
+      margin: 20px auto;
+      width: 300px;
+    }
+
+    .wheel {
+      border: 2px solid gold;
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      background: conic-gradient(#f5c518, #fff3b0, #f5c518);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      animation: spin 0s ease-in-out;
+    }
+
+    .wheel:hover {
+      animation: spin 3s ease-in-out;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .trophy-btn {
+      background-color: gold;
+      color: #1c1f2e;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .trophy-animation {
+      display: none;
+      animation: popUp 2s ease-in-out;
+    }
+
+    @keyframes popUp {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .thank-you {
+      font-size: 2em;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Header -->
+  <h1>Celebrating You, Ayman - Happy Men’s Day!</h1>
+
+  <!-- Image Section -->
+  <img src="path-to-his-photo.jpg" alt="Ayman's Photo">
+
+  <!-- Heartfelt Message -->
+  <div class="message">
+    <p>Dear Ayman,</p>
+    <p>Thank you for being the wonderful person you are. You inspire strength, kindness, and love. Today, we celebrate *you*! Happy Men’s Day!</p>
+  </div>
+
+  <!-- Interactive Section -->
+  <div class="interactive-section">
+    <!-- Wheel of Appreciation -->
+    <div class="wheel-container">
+      <div class="wheel">Spin Me!</div>
+    </div>
+
+    <!-- Trophy Button -->
+    <div class="trophy-container">
+      <button class="trophy-btn" onclick="revealTrophy()">Reveal Trophy</button>
+      <img id="trophy" class="trophy-animation" src="trophy-image.png" alt="Trophy" width="200">
+    </div>
+  </div>
+
+  <!-- Thank You Message -->
+  <div class="thank-you">Thank You for Being You!</div>
+
+  <!-- JavaScript -->
+  <script>
+    // Reveal Trophy Animation
+    function revealTrophy() {
+      const trophy = document.getElementById("trophy");
+      trophy.style.display = "block";
+      trophy.style.animation = "popUp 2s ease-in-out";
+    }
+  </script>
+
+</body>
+</html>
