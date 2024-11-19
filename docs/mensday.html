@@ -23,25 +23,6 @@
       margin: 20px auto;
       display: block;
     }
-    .wheel-container {
-      margin: 30px auto;
-      text-align: center;
-      position: relative;
-    }
-    .wheel {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 5px solid gold;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
-      text-align: center;
-    }
     .message {
       margin-top: 20px;
       font-size: 1.2em;
@@ -70,41 +51,20 @@
 
   <h1>Celebrating You, Ayman - Happy Men’s Day!</h1>
   <div class="container">
-    <img src="Ayman.jpeg" alt="Ayman's Picture">
+    <img src="ayman.jpg" alt="Ayman's Picture">
     <p>You’re an incredible person who deserves to be celebrated every day. Happy Men’s Day, Ayman!</p>
-  </div>
-
-  <div class="wheel-container">
-    <div class="wheel" onclick="spinWheel()">Spin the Wheel of Appreciation</div>
-    <div class="message" id="complimentMessage"></div>
   </div>
 
   <button class="trophy-button" onclick="showTrophy()">Reveal Your Surprise</button>
   <div id="trophySection" class="trophy-section">
-    <img src="trophy.png" alt="Trophy" width="150">
+    <!-- Adjusted the width to 100px for the trophy -->
+    <img src="trophy.png" alt="Trophy" width="100">
     <div class="trophy-text">Congratulations!!!<br>For being the best blessing I could ever ask for.</div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
   <script>
-    const compliments = [
-      "You make my heart smile every day.",
-      "You are my favorite person in the whole world.",
-      "Your strength inspires me to be better.",
-      "You light up every room you walk into.",
-      "You’re the kindest soul I know.",
-      "You always know how to make me laugh.",
-      "The world is a better place with you in it.",
-      "You’re the definition of awesome!"
-    ];
-
-    function spinWheel() {
-      const randomIndex = Math.floor(Math.random() * compliments.length);
-      const complimentMessage = document.getElementById('complimentMessage');
-      complimentMessage.textContent = compliments[randomIndex];
-    }
-
     function showTrophy() {
       const trophySection = document.getElementById('trophySection');
       trophySection.style.display = 'block';
