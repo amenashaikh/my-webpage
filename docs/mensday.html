@@ -24,6 +24,18 @@
       border-radius: 10px;
       margin: 20px auto;
       display: block;
+      animation: zoomIn 2s ease-out; /* Apply zoom-in animation */
+    }
+    /* Define the zoom-in animation */
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.5); /* Start smaller */
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1); /* End at normal size */
+        opacity: 1; /* Fully visible */
+      }
     }
     .message {
       margin-top: 20px;
@@ -58,9 +70,9 @@
     <p>Happy Men’s Day, Ayman!</p>
   </div>
 
-  <button class="trophy-button" onclick="showTrophy()">Reveal Your Surprise (Scroll)</button>
+  <button class="trophy-button" onclick="showTrophy()">Reveal Your Surprise (Scroll)"</button>
   <div id="trophySection" class="trophy-section">
-    <!-- Adjusted the width to 20px for the trophy -->
+    <!-- Adjusted the width to 50px for the trophy -->
     <img src="trophy.png" alt="Trophy" width="50">
     <div class="trophy-text">Congratulations!!!<br>For being the best blessing I could ever ask for.</div>
   </div>
